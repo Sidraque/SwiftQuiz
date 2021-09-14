@@ -72,6 +72,10 @@ class QuizManager{
     func validateAnswer(index: Int) {
         _totalAnswers += 1
         
+        if _totalAnswers == 0 {
+            print("responda pelo menos uma pergunta")
+        }
+        
         if quiz.validateOption(index) {
             _totalCorrectAnswers += 1
         }
